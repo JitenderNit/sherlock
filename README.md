@@ -1,57 +1,40 @@
-sherlock
-==============================
-
-Sherlock is a deep-learning approach to semantic data type detection which is important for, among others, data cleaning and schema matching.
-
-Project Organization
+# Sherlock: data and deployment scripts.
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+Sherlock is a deep-learning approach to semantic data type detection which is important for, among others, data cleaning and schema matching. This repository provides data and scripts to guide the deployment of Sherlock.
+
+##### More details about this repository follow. 
+
+## Project Organization
+------------
+
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+        ├── processed      <- Examples of preprocessed data sets (feature vectors and labels).
+        └── raw            <- Raw data example corresponding to preprocessed data.
+     
+    ├── notebooks          <- Notebooks demonstrating the deployment of Sherlock using this repository.
+            └── run_sherlock.py
+     
+    ├── src                <- Source code for working with this project.
+        ├── deploy         <- Scripts to (re)train models on new data, and generate predictions.
+            └── classes_sherlock.npy
+            └── predict_sherlock.py
+            └── train_sherlock.py
+        ├── features       <- Scripts to turn raw data, storing raw data columns, into features.
+            └── bag_of_characters.py
+            └── bag_of_words.py
+            └── build_features.py
+            └── par_vec_trained_400.pkl
+            └── paragraph_vectors.py
+            └── word_embeddings.py
+        ├── models         <- Trained models.
+            ├── sherlock_model.json
+            └── sherlock_weights.h5
+            
+    ├── LICENSE
+    
+    ├── TO COME.txt       <- File describing expected repository contents.
+    
+    └── requirements.txt  <- Dependencies for reproducing the work, and using the provided scripts.
 
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+------------
