@@ -2,7 +2,7 @@
 
 Sherlock is a deep-learning approach to semantic data type detection which is important for, among others, data cleaning and schema matching. This repository provides data and scripts to guide the deployment of Sherlock.
 
-##### More details about this repository follow. 
+### Please find the repository to be updated soon [here](https://github.com/mitmedialab/sherlock-project).
 
 ## Project Organization
 
